@@ -1,7 +1,12 @@
 <x-app-layout>
     <div class="max-w-6xl mx-auto p-4">
         <h1 class="text-3xl font-bold mb-6">Public Assets</h1>
-
+        @if(session('success'))
+            <div class="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+                {{ session('success') }}
+            </div>
+        @endif
+    
         @auth
         <!-- Add Button + Modal -->
         <button onclick="document.getElementById('uploadModal').classList.remove('hidden')" 
@@ -33,6 +38,15 @@
                     <a href="{{ $asset->download_link }}" target="_blank" class="inline-block mt-2 px-3 py-1 bg-blue-500 text-white rounded">Download</a>
                 </div>
             </div>
+            @auth
+                @if(auth()->id() === $asset->user_id)
+                    <form method="POST" action="{{ route('assets.destroy', $asset->id) }}" onsubmit="return confirm('Are you sure you want to delete this asset?');" class="mt-2">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="px-3 py-1 bg-red-600 text-white rounded">Delete</button>
+                    </form>
+                @endif
+            @endauth
             @endforeach
         </div>
     </div>

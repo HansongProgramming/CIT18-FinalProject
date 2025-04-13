@@ -76,6 +76,14 @@ class AssetController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $asset = Asset::findOrFail($id);
+        if ($asset->user_id !== auth()->id()) {
+            abort(403);
+        }
+    
+        $asset->delete();
+    
+        return redirect()->route('assets.index')->with('success', 'Asset deleted successfully!');
     }
+    
 }
