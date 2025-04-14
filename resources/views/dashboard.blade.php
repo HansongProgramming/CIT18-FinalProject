@@ -1,3 +1,4 @@
+<!-- resources/views/dashboard.blade.php -->
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -12,15 +13,14 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
-                        <!-- resources/views/dashboard.blade.php -->
-            <x-app-layout>
-                <div class="dashboard-content">
-                    <!-- Other dashboard content -->
-                    <div class="index-content">
-                        @include('assets.index') <!-- This will include the content of index.blade.php -->
-                    </div>
+
+            <!-- Your dashboard content -->
+            <div class="dashboard-content">
+                <!-- Pass the $assets variable to the included assets.index view -->
+                <div class="index-content">
+                    @include('assets.index', ['assets' => $assets]) <!-- Pass assets here -->
                 </div>
-            </x-app-layout>
+            </div>
         </div>
     </div>
 </x-app-layout>
