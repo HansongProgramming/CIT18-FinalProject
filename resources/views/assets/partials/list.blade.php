@@ -9,7 +9,7 @@
     @auth
     <!-- Add Button + Modal -->
     <button onclick="document.getElementById('uploadModal').classList.remove('hidden')" 
-        class="mb-4 px-4 py-2 bg-blue-600 text-white rounded">+ Add Asset</button>
+        class="mb-4 px-4 py-2 bg-blue-600 text-white rounded">+ share your treasure</button>
 
     <!-- Modal -->
     <div id="uploadModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
