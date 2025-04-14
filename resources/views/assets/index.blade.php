@@ -1,4 +1,3 @@
-<x-app-layout>
     <div class="max-w-6xl mx-auto p-4">
         <h1 class="text-3xl font-bold mb-6">Downloadable Assets</h1>
         @if(session('success'))
@@ -62,4 +61,3 @@
         </div>
 
     </div>
-</x-app-layout>
