@@ -16,9 +16,8 @@
 
             <!-- Your dashboard content -->
             <div class="dashboard-content">
-                <!-- Pass the $assets variable to the included assets.index view -->
                 <div class="index-content">
-                    @include('assets.index', ['assets' => $assets]) <!-- Pass assets here -->
+                    @include('assets.index', ['assets' => $assets]) 
                 </div>
             </div>
         </div>

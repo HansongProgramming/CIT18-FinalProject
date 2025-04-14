@@ -13,6 +13,8 @@ class AssetController extends Controller
     {
         $assets = Asset::with('user')->latest()->get();
         return view('assets.index', compact('assets'));
+        return view('dashboard', compact('assets'));
+
     }
     
 
