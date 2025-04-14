@@ -47,7 +47,7 @@
 
                     @auth
                         @if(auth()->id() === $asset->user_id)
-                            <form method="POST" action="{{ route('assets.destroy', $asset->id) }}" onsubmit="return confirm('Are you sure you want to delete this asset?');" class="bg-gray-900 p-6 rounded w-96 space-y-4 text-white">
+                            <form method="POST" action="{{ route('assets.destroy', $asset->id) }}" onsubmit="return confirm('Are you sure you want to delete this asset?');" >
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="px-3 py-1 bg-red-600 text-white rounded">Delete</button>
