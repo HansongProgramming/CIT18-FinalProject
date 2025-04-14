@@ -1,5 +1,5 @@
 <div class="max-w-6xl mx-auto p-4">
-    <h1 class="text-3xl text-gray-500 font-bold mb-6">Treasures : </h1>
+    <h1 class="text-3xl text-gray-500 font-bold mb-6">💎 Treasures : </h1>
     @if(session('success'))
         <div class="mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
             {{ session('success') }}
