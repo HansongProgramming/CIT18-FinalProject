@@ -1,4 +1,4 @@
-// app/Http/Controllers/DashboardController.php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -8,10 +8,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // Fetch assets for the dashboard
         $assets = Asset::with('user')->latest()->get();
-
-        // Pass assets to the dashboard view
         return view('dashboard', compact('assets'));
     }
 }
