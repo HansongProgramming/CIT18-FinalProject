@@ -17,7 +17,7 @@
                 <div class="dashboard-content">
                     <!-- Other dashboard content -->
                     <div class="index-content">
-                        @include('index') <!-- This will include the content of index.blade.php -->
+                        @include('assets.index') <!-- This will include the content of index.blade.php -->
                     </div>
                 </div>
             </x-app-layout>
