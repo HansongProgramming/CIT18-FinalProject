@@ -17,7 +17,7 @@
             <!-- Your dashboard content -->
             <div class="dashboard-content">
                 <div class="index-content">
-                    @include('assets.index', ['assets' => $assets]) 
+                    @include('assets.partials.list', ['assets' => $assets])
                 </div>
             </div>
         </div>
